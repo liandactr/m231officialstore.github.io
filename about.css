@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+html {
+    scroll-behavior: smooth;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Spartan", san-serif;
+  }
+
+.section-p1 {
+    padding: 40px 80px;
+}
+  
+#header {
+    position: fixed;
+    width: 100%;
+    overflow: hidden;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background-color: #e3e6f3;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+  }
+  
+  #header a img{
+    width: 70px;
+  }
+  
+  #navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .quantity {
+    background-color: red;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ddd;
+    position: absolute;
+    top: -5px;
+    left: 80%;
+    padding: 3px 5px;
+    font-size: 7px;
+  }
+  
+  #mobile {
+    display: none;
+    align-items: center;
+  }
+  
+  #close {
+    display: none;
+  }
+  
+  #navbar li {
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+  }
+  
+  #navbar li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    transition: 0.3s ease;
+  }
+  
+  #navbar li a:hover,
+  #navbar li a.active {
+    color: #088178;
+  }
+  
+  #navbar li a:hover::after,
+  #navbar li a.active::after {
+    content: " ";
+    width: 30%;
+    height: 2px;
+    background: 2px;
+    background-color: #088178;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+  }
+
+  .about-us{
+    width: 100%;
+    padding: 90px 0;
+    background: #ddd;
+  }
+  .pic{
+    height: auto;
+    width:  302px;
+  }
+  .about{
+    width: 1130px;
+    max-width: 85%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .about img{
+    width: 40%;
+    border-radius: 10%;
+    margin-top: 30px;
+  }
+  .text{
+    width: 540px;
+  }
+  .text h2{
+    font-size: 70px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .text h5{
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  
+  .text p{
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 1px;
+  }
+  .data{
+    margin-top: 30px;
+  }
+  .button-readmore{
+    font-size: 18px;
+    background: #4070f4;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    padding: 8px 25px;
+    border-radius: 6px;
+    transition: 0.5s;
+  }
+  .button-readmore:hover{
+    background: #000;
+    border: 1px solid #4070f4;
+  }
+  
+  .description {
+    line-height: 18px;
+    max-height: calc(18px * 15);
+    overflow: hidden;
+  }
+
+  .button-readmore::after {
+    content: 'Read more'
+  }
+  .button-readmore {
+    padding: 5px 10px;
+    background: #4070f4;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .button-readmore:hover {
+    background: #ccc;
+  }
+  
+  #check-readmore:checked ~ .button-readmore::after {
+    content: 'Read less'
+  }
+  #check-readmore:checked ~ .description {
+    max-height: 100vh;
+  }
+  
+  #check-readmore {
+    position: absolute;
+    left: -100px;
+  }
